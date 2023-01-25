@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+//1º. ejercicio y 2º.ejercicio
+<?php
+$txt = "Hola mundo"; 
+$numero1 = 5;
+$numero2 = 2;
+
+echo $txt;
+echo"<br>";
+echo $numero1;
+echo "<br>";
+echo $numero2;
+
+ echo"<br>";
+ echo"<br>";
+
+//3º. ejercicio
+
+for ($i=1; $i <=10 ; $i++) {
+echo '<option value="'.$i.'">'.$i.'</option>';
+}
+
+ echo"<br>";
+ echo"<br>";
+
+//4º. ejercicio
+
+for($numero = 1; $numero <= 10; $numero++) {
+    $multiplicacion = 9 * $numero;
+    echo "9 x $numero = $multiplicacion <br>";
+}
+ 
+ echo"<br>";
+ echo"<br>";
+
+//5º.Ejercicio
+
+$numero = 5;
+
+if($numero % 2 == 0) {
+    echo "par";
+} else {
+    echo "impar";
+}
+?> 
+
+</body>
+</html>
