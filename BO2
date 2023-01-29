@@ -1,0 +1,135 @@
+//Ejercicio 1
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$a = 5;
+$b = 10;
+
+if ($a > $b) {
+    echo $a . " es el mayor.";
+} else {
+    echo $b . " es el mayor.";
+}
+?>
+</body>
+</html>
+
+//Ejercicio 2 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$nota = 8;
+
+switch ($nota) {
+case ($nota >= 5 && $nota <= 6):
+        echo "Aprobado";
+        break;
+    case ($nota >= 7 && $nota <= 8):
+        echo "Notable";
+        break;
+    case ($nota >= 9 && $nota <= 10):
+        echo "Sobresaliente";
+        break;
+    default:
+        echo "Nota inválida";
+}
+?>
+</body>
+</html>
+
+
+//Ejercicio 3
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+$moto = array("moto1", "moto2", "moto3", "moto4"); 
+echo $moto[0] ." ". $moto[1] ." ".$moto[2] ." ". $moto[3] . $moto[4];
+
+
+
+$coche = array("coche1", "coche2", "coche3", "coche4"); 
+echo $coche[0] ." ". $coche[1] ." ".$coche[2] ." ". $coche[3] . $coche[4];
+
+
+//a) Recorre uno de los arrays mostrando sus elementos
+
+$coches = array("coche1", "coche2", "coche3", "coche4");
+
+foreach($coches as $coche)
+
+
+echo $coche." ";
+
+// b) Ordena y muestra sus elementos
+
+$coche = array("coche1", "coche2", "coche3", "coche4"); 
+
+rsort($coche);
+
+echo $coche[0] ." ". $coche[1] ." ".$coche[2] ." ". $coche[3] . $coche[4];
+
+//c) Haz que lo indicado en a y b se realice mediante una llamada a la funcion mostrarResultadosOrdenados
+
+$coches = array("coche1", "coche2", "coche3", "coche4");
+
+function mostrarResultadosOrdenados($coches) {
+  
+    foreach($coches as $coche) {
+        echo $coche. " ";
+    }
+    
+    
+    
+    rsort($coches);
+    echo "<br>";
+    for($i = 0; $i < count($coches); $i++) {
+        echo $coches[$i]." ";
+    }
+}
+
+mostrarResultadosOrdenados($coches);
+
+//d) Indica por pantalla cuantos elementos hay
+
+$coches = array("coche1", "coche2", "coche3", "coche4");
+
+
+echo count($coches);
+
+
+?>
+
+</body>
+</html>
+
+//Ejercicio 4
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+// Fecha y hora actual
+$fechaHora = date("Y-m-d H:i:s");
+
+// Formato 1
+echo "Fecha y hora actual: " . $fechaHora . "<br>";
+
+// Formato 2
+echo "Fecha y hora actual: " . date("d/m/Y H:i:s", strtotime($fechaHora));
+?>
+
+
+</body>
+</html>
